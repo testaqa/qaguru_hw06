@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class SimpleTests {
 
     @Test
-    void SearchGoogle() {
+    void SearchYa() {
         open("https://ya.ru/");
         $(".input__input").val("Selenide").pressEnter();
         $(".organic__subtitle").shouldHave(text("selenide.org"));
