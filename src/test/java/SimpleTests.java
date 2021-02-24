@@ -6,11 +6,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class SimpleTests {
 
     @Test
-    void SearchGoogle() {
-        open("https://google.com/");
-        $("[name=q]").val("Selenide").pressEnter();
-
-        $$("a cite").first().shouldHave(text("selenide.org"));
+    void SearchYa() {
+        open("https://ya.ru/");
+        $(".input__input").val("Selenide").pressEnter();
+        $(".organic__subtitle").shouldHave(text("selenide.org"));
     }
 
 }
